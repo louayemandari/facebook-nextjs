@@ -1,3 +1,20 @@
+## Facebook messenger using NEXT.js and supabase 
+this is a clone for a facebook chat messenger that uses neext.js with jsx syntax and supabase
+
+tech stack:
+- Next.js with JSX for frontend dev
+- Tailwindcss for customizing the frontend
+- DaisyUI and MUI for icons and buttons and other ready-to-use components
+- Supabase for db including auth and CRUD operations
+- Github for CI/CD
+- varcel for deployment and hosting
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
