@@ -5,7 +5,11 @@ import useProtectedRoute from '@/hooks/useProtectedpage'
 function main() {
   const router = useRouter()
   const {email} = useProtectedRoute()
-
+//NOTE - i need to add the adding button for the db so when i add to the db
+//NOTE - i need the db to have a message saved and the id of the sender who is currently logged
+//NOTE - to be submitted along the message to db 
+//NOTE - then i want the recieve get req to get 20 messages from that db where the sender and receiver exchanged messages
+//NOTE - then we add end to end encryption
   
    
 
