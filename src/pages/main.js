@@ -10,7 +10,7 @@ function main() {
 //NOTE - to be submitted along the message to db 
 //NOTE - then i want the recieve get req to get 20 messages from that db where the sender and receiver exchanged messages
 //NOTE - then we add end to end encryption
-  
+//NOTE - must add daisyui componetns too
    
 
   async function logoutHandle(){
