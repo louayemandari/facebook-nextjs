@@ -23,13 +23,8 @@ export default function Home() {
 
       if (error) {
         console.log(error);
-      } else if (data) {
-        toast.success('Successfully logged in!!')
-       
-const { error } = await supabase
-  .from('users')
-  .insert({ email: email })
-      if(!error)
+      } 
+      if(!error){
         console.log('user has been signed to users table')
         router.push('/main');
       }
@@ -41,24 +36,30 @@ const { error } = await supabase
   }
 
   return (
-    <div>
+    <div className='bg-slate-50 flex flex-col justify-center text-center my-10 border-spacing-1 rounded-md border-solid shadow-md'>
       <Toaster/>
+      <Facebook className='text-blue-500 mx-auto' fontSize='large'/>
       <input
         onChange={(e) => setEmail(e.target.value)}
         type="email"
         placeholder="Type your email"
-        className="input input-bordered input-accent w-full max-w-xs"
+        className="input input-bordered mx-auto input-primary w-full max-w-xs"
       />
       <input
         onChange={(e) => setPassword(e.target.value)}
         type="password"
         placeholder="Type your password"
-        className="input input-bordered input-secondary w-full max-w-xs"
+        className="input input-bordered input-primary my-3 mx-auto w-full max-w-xs"
       />
 
-      <button onClick={handleLogin} className="btn-success">
+      <button onClick={handleLogin} className="btn-primary mx-[100px] my-3 rounded-md">
         Log In
       </button>
-    </div>
+    
+      
+
+
+      </div>
+      
   );
 }
