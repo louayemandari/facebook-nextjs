@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '@/supabase/supabase';
 import useProtectedRoute from '@/hooks/useProtectedRoute';

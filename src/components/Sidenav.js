@@ -2,7 +2,7 @@ import React from 'react'
 
 function Sidenav() {
   return (
-    <div className=' w-1/6'>
+    <div className=' w-1/12'>
         side
     </div>
   )

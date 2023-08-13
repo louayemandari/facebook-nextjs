@@ -1,8 +1,11 @@
 import React from 'react'
+import Userlist from './Userlist'
 
 function CenterSection() {
   return (
-    <div className='w-1/6 bg-slate-100'>Center</div>
+    <div className='w-3/12 bg-slate-100'>
+      <Userlist/>
+    </div>
   )
 }
 
