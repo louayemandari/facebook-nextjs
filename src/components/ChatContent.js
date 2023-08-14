@@ -51,16 +51,7 @@ function ChatContent() {
           {item.text}
         </div>
       ))}
-      <div className='absolute h-[50px] mt-[25px]'>
-        <input
-          type="text"
-          className='input input-primary'
-          value={text}
-          onChange={handleChange}
-          placeholder="Enter a message"
-        />
-      
-      </div>
+  
     </div>
   );
 }
