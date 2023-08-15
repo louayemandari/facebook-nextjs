@@ -5,7 +5,7 @@ import { supabase } from '@/supabase/supabase';
 import { MyContext } from '@/context/Mycontext';
 
 function InputBox() {
-  const { messages, setMessages } = useContext(MyContext);
+  const {friend,setFriend, messages, setMessages } = useContext(MyContext);
   const { switching, setSwitching,casheBox,setCasheBox } = useContext(MyContext); // Corrected context destructuring
   const router = useRouter();
   const [text, setText] = useState('');
@@ -16,13 +16,15 @@ function InputBox() {
 
     const { data, error } = await supabase
       .from('messages')
-      .insert([{ text: text, sent_from_user_email: email }])
+      .insert([{ text: text, sent_from_user_email: email,sent_to_user_email:friend }])
       .select();
 
     if (error) {
       console.error(error);
     } else {
-      setMessages([...messages, ...data]); // Append the new message to existing messages
+      
+      setMessages([...messages, ...data]);
+      console.log(messages) // Append the new message to existing messages
       setText('');
     }
   };

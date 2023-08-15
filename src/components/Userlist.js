@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import Users from './Users';
 import { supabase } from '@/supabase/supabase';
-
+import { MyContext } from '@/context/Mycontext';
 function Userlist() {
   const [accounts, setAccounts] = useState([]);
-
+  const {firend,setFriend} = useContext(MyContext)
   async function getUsers() {
     try {
       const { data, error } = await supabase
@@ -29,7 +29,11 @@ function Userlist() {
   return (
     <div>
       {accounts.map((item) => (
-        <Users key={item.email} name={item.email} />
+        <Users key={item.email} name={item.email} 
+        onClick={()=>{
+          setFriend(item.email)
+          console.log(`the user ${item.email} has been choosen`)
+        }} />
       ))}
       
 
